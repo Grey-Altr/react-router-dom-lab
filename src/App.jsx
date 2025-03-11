@@ -1,7 +1,14 @@
+import { Route, Routes } from 'react-router';
+
 const App = () => {
   return (
-    <Navbar />
-    <h1>Hello world!</h1>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<h2>Home</h2>} />
+        <Route path='/mail' element={<MailList mail={mail} />} />
+      </Routes>
+    </>
   );
 };
 
