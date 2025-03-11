@@ -6,7 +6,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path='/' element={<h2>Home</h2>} />
-        <Route path='/mail' element={<MailList mail={mail} />} />
+        <Route path='/mail' element={<MailboxList mail={mail} />} />
       </Routes>
     </>
   );
