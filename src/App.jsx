@@ -1,5 +1,13 @@
 import { Route, Routes } from 'react-router';
 
+const mailboxState = [
+  {
+  _id: 1,
+  boxSize: 'Small',
+  boxOwner: 'Alex',
+},
+];
+
 const App = () => {
   return (
     <>
