@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router';
+import MailboxDetails from './components/MailboxDetails/MailboxDetails.jsx';
 
 const mailboxState = [
   {
@@ -15,6 +16,10 @@ const App = () => {
       <Routes>
         <Route path='/' element={<h2>Home</h2>} />
         <Route path='/mail' element={<MailboxList mail={mail} />} />
+        <Route 
+          path='/mail/:mailId'
+          element={<MailboxDetails mail={mail} />}
+        />
         <Route path='*' />
       </Routes>
     </>
