@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-const initialState = [
-  {
+// uncaught bug
+
+const initialState = {
     _id: 0,
-    boxSize: "",
-    boxOwner: "",
-  },
-];
+    boxSize: 'Small',
+    boxOwner: '',
+  };
 
 const MailboxForm = (props) => {
   const [formData, setFormData] = useState(initialState);
@@ -18,7 +18,7 @@ const MailboxForm = (props) => {
     evt.preventDefault();
     props.addMailbox(formData);
     setFormData(initialState);
-    navigate('/mailbox')
+    navigate('/mailboxes');
   };
 
   const handleChange = ({ target }) => {
@@ -49,9 +49,9 @@ const MailboxForm = (props) => {
         value={formData.boxSize}
         onChange={handleChange}
         >
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
         </select>
 
         <button>Submit</button>

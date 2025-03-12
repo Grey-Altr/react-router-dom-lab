@@ -3,21 +3,44 @@ import { Route, Routes } from 'react-router';
 import NavBar from './components/NavBar/NavBar.jsx';
 import MailboxDetails from './components/MailboxDetails/MailboxDetails.jsx';
 import MailboxList from './components/MailboxList/MailboxList.jsx';
+import MailboxForm from './components/MailboxForm/MailboxForm.jsx';
+import '../src/App.css';
 
 const App = () => {
-  const [mailbox, setMailbox] = useState([]);
+  const [mailboxes, setMailboxes] = useState([]);
+
+  const addMailbox = (formData) => {
+    const newMailbox = { ...formData, _id: mailboxes.length + 1 };
+    setMailboxes((previousMailboxes) => [...previousMailboxes, newMailbox]);
+  };
 
   return (
     <>
       <NavBar />
       <Routes>
-        <Route path='/' element={<h2>Home</h2>} />
-        <Route path='/mailbox' element={<MailboxList mail={mail} />} />
-        <Route 
-          path='/mailbox/:mailboxId'
-          element={<MailboxDetails mail={mail} />}
+        <Route
+          path='/'
+          element={<h2>Home</h2>}
         />
-        <Route path='*' />
+        <Route
+          path='/mailboxes'
+          element={<MailboxList mailboxes={mailboxes} />}
+        />
+        <Route
+          path='/mailboxes/new'
+          element={ <MailboxForm addMailbox={addMailbox} /> }
+        />
+        <Route 
+          path='/new-mailbox' element={ <MailboxForm addMailbox={addMailbox} /> }
+        />
+        <Route 
+          path='/mailboxes/:id'
+          element={<MailboxDetails mailboxes={mailboxes} />}
+        />
+        <Route
+          path='*'
+          element={<h2>Page Not Found</h2>}
+        />
       </Routes>
     </>
   );
