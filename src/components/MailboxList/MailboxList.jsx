@@ -7,9 +7,9 @@ const MailboxList = (mail) => {
       <>
         <h2>Mailbox List</h2>
         <ul>
-          <li key={mail._id}>
+          <li key={mailbox._id}>
             <Link to={`/mail//${mail._id}`}>
-              <h3>Mailbox{mail._id}</h3>
+              <h3>Mailbox{mailbox._id}</h3>
             </Link>
           </li>
         </ul>
