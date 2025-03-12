@@ -1,8 +1,8 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router';
 import NavBar from './components/NavBar/NavBar.jsx';
 import MailboxDetails from './components/MailboxDetails/MailboxDetails.jsx';
 import MailboxList from './components/MailboxList/MailboxList.jsx';
-import { useState } from 'react';
 
 const mailboxState = [
   {
