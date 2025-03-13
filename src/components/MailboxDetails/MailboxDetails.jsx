@@ -5,7 +5,7 @@ const MailboxDetails = ({ mailboxes }) => {
     console.log(id);
 
     const mailbox = mailboxes.find((mailbox) => (
-        mailbox._id === id
+        mailbox._id === Number(id)
     ));
 
     if (!mailbox) {
