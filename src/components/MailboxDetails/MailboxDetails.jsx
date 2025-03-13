@@ -1,11 +1,11 @@
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 const MailboxDetails = ({ mailboxes }) => {
     const { id } = useParams();
-    console.log('mailboxId:', mailboxId);
+    console.log('mailboxId:', id);
 
     const mailbox = mailboxes.find((mailbox) => (
-        mailbox._id === Number(id)
+        mailbox._id === id
     ));
 
     return (

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -10,12 +10,12 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to='mailboxes'>
+            <Link to='/mailboxes'>
               Mailboxes
             </Link>
-            </li>
+          </li>
           <li>
-            <Link to='new-mailbox'>
+            <Link to='/new-mailbox'>
               New Mailbox
             </Link>
           </li>

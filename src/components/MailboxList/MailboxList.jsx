@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const MailboxList = ({ mailboxes }) => {
     console.log(mailboxes);
@@ -9,9 +9,9 @@ const MailboxList = ({ mailboxes }) => {
         <ul>
           {mailboxes.map((mailbox) => {
             return (
-              <li key={mailboxes._id}>
-                <Link to={`/mailboxes/${mailboxes._id}`}>
-                  <h3>Mailbox{mailboxes._id}</h3>
+              <li key={mailbox._id}>
+                <Link to={`/mailboxes/${mailbox._id}`}>
+                  <h3>Mailbox{mailbox._id}</h3>
                 </Link>
               </li>
             );
