@@ -39,6 +39,7 @@ const MailboxForm = (props) => {
             id="boxOwner"
             value={formData.boxOwner}
             onChange={handleChange}
+            required
         />
 
         <label htmlFor="boxSize">
