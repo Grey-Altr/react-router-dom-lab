@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-// uncaught bug
-
 const initialState = {
     _id: null,
     boxSize: 'Small',
